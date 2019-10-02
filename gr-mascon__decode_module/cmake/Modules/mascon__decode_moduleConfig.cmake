@@ -1,0 +1,30 @@
+INCLUDE(FindPkgConfig)
+PKG_CHECK_MODULES(PC_MASCON__DECODE_MODULE mascon__decode_module)
+
+FIND_PATH(
+    MASCON__DECODE_MODULE_INCLUDE_DIRS
+    NAMES mascon__decode_module/api.h
+    HINTS $ENV{MASCON__DECODE_MODULE_DIR}/include
+        ${PC_MASCON__DECODE_MODULE_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    MASCON__DECODE_MODULE_LIBRARIES
+    NAMES gnuradio-mascon__decode_module
+    HINTS $ENV{MASCON__DECODE_MODULE_DIR}/lib
+        ${PC_MASCON__DECODE_MODULE_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+)
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(MASCON__DECODE_MODULE DEFAULT_MSG MASCON__DECODE_MODULE_LIBRARIES MASCON__DECODE_MODULE_INCLUDE_DIRS)
+MARK_AS_ADVANCED(MASCON__DECODE_MODULE_LIBRARIES MASCON__DECODE_MODULE_INCLUDE_DIRS)
+
