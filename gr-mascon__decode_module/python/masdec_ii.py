@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # 
-# Copyright 2019 <+YOU OR YOUR COMPANY+>.
+# Copyright 2019 7M4MON
 # 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -29,8 +29,10 @@ import math
 from gnuradio import gr
 
 class masdec_ii(gr.sync_block):
-
-    def __init__(self, thres_duration):
+    """
+    docstring for block masdec_ii
+    """
+    def __init__(self, thres_duration, max_state):
         gr.sync_block.__init__(self,
             name="masdec_ii",
             in_sig=[numpy.int32],
@@ -39,6 +41,7 @@ class masdec_ii(gr.sync_block):
         self.last_count = 0
         self.last_bit = 0
         self.thres_duration = thres_duration
+        self.limit = thres_duration * (max_state + 1) - 1
 
 
 
@@ -49,6 +52,7 @@ class masdec_ii(gr.sync_block):
         for det_bit in in0:
             if det_bit == 1 :
                 self.on_counter += 1
+                if self.on_counter > self.limit : self.on_counter = self.limit
             else :
                 if self.last_bit == 1 :    # edge 1 -> 0
                     self.last_count = self.on_counter
