@@ -1,5 +1,5 @@
 # ook_enc_dec
-This is On-Off Keying Encoder, Decoder module for GRC (GNU Radio Companion).
+This is On-Off Keying Encoder / Decoder module for GRC (GNU Radio Companion).
 
 Emulating Plarail Super Hikari Controller
 
