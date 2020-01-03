@@ -1,9 +1,0 @@
-/usr/local/lib/cmake/mascon__decode_module/mascon__decode_moduleConfig.cmake
-/usr/local/include/mascon__decode_module/api.h
-/usr/local/lib/python2.7/dist-packages/mascon__decode_module/__init__.py
-/usr/local/lib/python2.7/dist-packages/mascon__decode_module/masdec_ii.py
-/usr/local/lib/python2.7/dist-packages/mascon__decode_module/__init__.pyc
-/usr/local/lib/python2.7/dist-packages/mascon__decode_module/masdec_ii.pyc
-/usr/local/lib/python2.7/dist-packages/mascon__decode_module/__init__.pyo
-/usr/local/lib/python2.7/dist-packages/mascon__decode_module/masdec_ii.pyo
-/usr/local/share/gnuradio/grc/blocks/mascon__decode_module_masdec_ii.xml
