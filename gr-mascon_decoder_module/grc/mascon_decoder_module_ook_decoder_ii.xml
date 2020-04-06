@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <block>
-  <name>OOK DECORDER</name>
+  <name>OOK DECODER</name>
   <key>mascon_decoder_module_ook_decoder_ii</key>
   <category>[mascon_decoder_module]</category>
   <import>import mascon_decoder_module</import>
