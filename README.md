@@ -1,7 +1,8 @@
-# ook_enc_dec
+# ook_enc_dec  
 This is On-Off Keying Encoder / Decoder module for GRC (GNU Radio Companion).
 
-Emulating Plarail Super Hikari Controller
+HackRF OneとGRCを使って、プラレール「ぼくがうんてんするスーパーひかり号セット」の無線制御信号をエミュレートしたものです。  
+詳しい解説は2020年4月発売の「RFワールド No.50 (特設記事) HackRF One＋GRCでラジコン解析＆エミュレート」を御覧ください。  
 
 Encoder  
 <img src="https://github.com/7m4mon/ook_enc_dec/blob/master/pla_hikari_ctrl_tx.grc.png" alt="pla_hikari_ctrl_tx" title="">
